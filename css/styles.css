@@ -51,12 +51,15 @@ a h4 {
 /*#############################################*/
 /*                  header                     */
 /*#############################################*/
+.header{
+    border-bottom:1px solid #e7e7e7;
+    width:100%;
+}
 .site-header{
     background-color:#FFF;
-    border-bottom:1px solid #e7e7e7;
     min-height: 50px;
     margin-bottom:15px;
-    padding:15px 0 15px 0;
+    padding-top:10px;
     margin-top:0;
     font-weight: 300;
     
@@ -70,6 +73,7 @@ a h4 {
 }
 .site-header ul.main-nav a{
      color:#999;
+    cursor: pointer;
 }
 .site-header ul.main-nav a:hover{
      color:#111;
@@ -84,16 +88,54 @@ a h4 {
 .site-header .site-logo{
     float:left;
 }
+
+/*sticky header*/
 .sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    padding-bottom:15px;
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 2px #efefef;
     z-index: 9999;
 }
+.sticky .main-nav{
+    padding-right:15px;
+}
 
+.sticky .sticky-nav{
+    width:1236px;
+    margin:0 auto;
+}
+
+/*#############################################*/
+/*                  hero slider              */
+/*#############################################*/
+#hero-slider{
+    width:1200px;
+    height: 796px;
+    overflow:hidden;
+}
+
+#hero-slider .hero-slides{
+    display: block;
+    width: 3510px;
+    height: 796px;
+    margin:0;
+    padding:0;
+}
+
+#hero-slider .hero-slide{
+    float:left;
+    list-style-type: none;
+    width:1200px;
+    height: 796px;
+}
+#hero-slider ul.hero-slides{
+    margin:0;
+    padding:0;
+}
 
 /*#############################################*/
 /*                  about section              */
@@ -114,17 +156,30 @@ a h4 {
 /*#############################################*/
 /*                  projects                   */
 /*#############################################*/
+#projects .project-thumb{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
 #projects{
     margin-top:50px;
     padding-bottom:15px;
 }
-#project a img{
-    opacity: 0.7;
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
+#projects .project-thumb img{
+    opacity: 0.8;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+}
+#projects .project-thumb img:hover{
+      opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
