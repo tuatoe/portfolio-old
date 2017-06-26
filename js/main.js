@@ -1,8 +1,7 @@
 /* Navigation scroll */
 'use strict';
 $(function(){
-      /* For the sticky navigation */
-    
+    /* For the sticky navigation */
     $('.trigger-sticky-nav').waypoint(function(direction) {
         if (direction == "down") {
             $('nav').addClass('sticky');
@@ -10,12 +9,11 @@ $(function(){
             $('nav').removeClass('sticky');
         }
     }, {
-      offset: '60px;'
+      offset: '50px;'
     });
     
    
     //scroll to sections
-
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
