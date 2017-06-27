@@ -2,8 +2,8 @@
 var contactModal = $('.contact-modal'),
     contactModalTrigger = $('.open-contact-modal'),
    
-    projectModal = $('.project-modal'),
-    projectModalTrigger = $('.open-project-modal'),
+    manlyCollectionModel = $('.manly-collection-modal'),
+    manlyCollectionModalTrigger = $('.open-manly-collection-modal'),
     
     closeModalBtn = $('.close-modal');
 
@@ -24,5 +24,5 @@ var modals = {
 }
 
 modals.allModals(contactModal, contactModalTrigger);
-modals.allModals(projectModal, projectModalTrigger);
+modals.allModals(manlyCollectionModel, manlyCollectionModalTrigger);
 modals.closeModal();

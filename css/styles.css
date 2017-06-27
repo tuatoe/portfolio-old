@@ -240,6 +240,9 @@ a h4 {
 .modal-content{
     width:100%;
     padding:15px;
+    height:900px;
+    overflow-y:scroll;
+    color:#FFFFFF;
 }
 .close-modal{
     position: absolute;
@@ -325,7 +328,10 @@ a h4 {
 /*#############################################*/
 /*small screen*/
 @media(min-width: 530px){
-   
+   .modal-content{
+        height:1000px;
+
+    }
     .row-large-4{
         float:left;
         width:33.33%;
