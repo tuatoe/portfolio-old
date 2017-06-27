@@ -68,7 +68,16 @@ $(function(){
         .on('mouseleave', startSlider);
     
     startSlider();
+    
+    //init lazyload plugin
+    $("img.lazy").lazyload({
+        effect : "fadeIn",
+        skip_invisible : true
+    });
    
 });
+
+
+
 
     

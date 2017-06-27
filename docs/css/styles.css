@@ -240,6 +240,29 @@ a h4 {
 .modal-content{
     width:100%;
     padding:15px;
+    height:900px;
+    overflow-y:scroll;
+    color:#FFFFFF;
+    padding-bottom:15px;
+    padding-top:15px;
+}
+.modal-content h2{
+    border-bottom:2px solid #66ccff;
+    margin-bottom:10px;
+}
+.modal-content ul{
+    list-style: none;
+}
+.modal-content .live-site{
+    background-color:#66ccff;
+    padding:5px;
+    font-size:1rem;
+    border-radius: 4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+}
+.modal-content .live-site a{
+    color:#FFF;
 }
 .close-modal{
     position: absolute;
@@ -252,6 +275,7 @@ a h4 {
     font-weight: 100;
     color:#FFFFFF;
 }
+
 .close-modal:hover{
     color:#66ccff;
 }
@@ -325,7 +349,11 @@ a h4 {
 /*#############################################*/
 /*small screen*/
 @media(min-width: 530px){
-   
+   .modal-content{
+        height:1000px;
+       padding-top:40px;
+
+    }
     .row-large-4{
         float:left;
         width:33.33%;
