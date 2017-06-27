@@ -44,6 +44,11 @@ a h4 {
     height: auto;
     max-width: 100%;
 }
+.clear-both{
+    content: "";
+    clear: both;
+    display: table;
+}
 /*#############################################*/
 /*                  wrapper                    */
 /*#############################################*/
@@ -308,8 +313,19 @@ a h4 {
 .fa-behance-square,
 .fa-twitter-square,
 .fa-facebook-official{
-    font-size:30px;
+    font-size:2rem;
     color:#66ccff;
+}
+.fa-behance-square:hover,
+.fa-twitter-square:hover,
+.fa-facebook-official:hover{
+    color:#555;
+}
+.copy-right{
+    font-size:.9rem;
+}
+.social-media{
+    margin-bottom:15px;
 }
 
 

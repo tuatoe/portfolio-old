@@ -50,6 +50,15 @@ var modals = {
         closeModalBtn.on('click',function(){
             $(this).closest('.modal').removeClass('modal-is-visible');
         });
+    },
+    
+    secondMethodOfCloser : function(){
+        var modalContent = $('.modal-content');
+        $('.modal').click(function(event) {
+            if ($(event.target).closest('.modal-content').length === 0) {
+                $(this).closest('.modal').removeClass('modal-is-visible');
+            }
+        });
     }
 }
 
@@ -66,5 +75,5 @@ modals.allModals(panzsirModel, panzsirModalTrigger);
 modals.allModals(powerInDiversityModel, powerInDiversityModalTrigger);
 modals.allModals(logosModel, logosModalTrigger);
 modals.allModals(printsModel, printsModalTrigger);
-
+modals.secondMethodOfCloser();
 modals.closeModal();

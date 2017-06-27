@@ -72,7 +72,6 @@ $(function(){
     //init lazyload plugin
     $("img.lazy").lazyload({
         effect : "fadeIn",
-        skip_invisible : true
     });
    
 });
