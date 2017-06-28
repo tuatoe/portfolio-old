@@ -4,9 +4,9 @@ $(function(){
     /* For the sticky navigation */
     $('.trigger-sticky-nav').waypoint(function(direction) {
         if (direction == "down") {
-            $('nav').addClass('sticky');
+            $('header').addClass('sticky');
         } else {
-            $('nav').removeClass('sticky');
+            $('header').removeClass('sticky');
         }
     }, {
       offset: '150px;'
