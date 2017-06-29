@@ -239,8 +239,8 @@ a h4 {
     .site-logo{
         left:auto;
         transform:translateX(0) scale(1);
-         -webkit-transform:translateX(0) scale(1);
-         -moz-transform:translateX(0) scale(1);
+         -webkit-transform:translateX(0), scale(1);
+         -moz-transform:translateX(0), scale(1);
     }
 }
 
@@ -361,8 +361,13 @@ a h4 {
     overflow: hidden;
 }
 #projects{
-    margin-top:50px;
+    margin-top:0;
     padding-bottom:15px;
+}
+@media(min-width:530px){
+    #projects{
+        margin-top:50px;
+    }
 }
 #projects .project-thumb img{
     opacity: 0.8;
@@ -375,7 +380,7 @@ a h4 {
     transition: transform 0.5s, opacity 0.5s;
 }
 #projects .project-thumb img:hover{
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -420,8 +425,9 @@ a h4 {
     padding-top:15px;}
 
 @media(min-width: 530px){
-.modal-content{
-   padding-top:40px;
+    .modal-content{
+       padding-top:40px;
+    }
 }
 @media(min-width: 800px){
     .modal-content{
