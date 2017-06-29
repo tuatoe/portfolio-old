@@ -14,18 +14,26 @@ $(function(){
     
    
     //scroll to sections
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
+    $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
       });
+    } // End if
+  });
 
     
     /*slider*/
@@ -73,7 +81,36 @@ $(function(){
     $("img.lazy").lazyload({
         effect : "fadeIn",
     });
-   
+    
+    //site mobile menu
+    /*class MobileMenu {
+        constructor(){
+            this.menuIcon = $('.site-header-menu-icon');
+            this.menuContent = ('.site-header-menu-content');
+            this.events();
+        }
+        events(){
+            this.menuIcon.click(this.toggleTheMenu.bind(this));
+        }
+        
+        toggleTheMenu(){
+            this.menuContent.toggleClass('site-header-menu-content-is-visible');
+        }
+    }
+    
+     new MobileMenu();
+    */
+    
+    var mobileMenu = function(){
+        var menuIcon = $('.site-header-menu-icon');
+        menuIcon.on('click', function(){
+            menuIcon.toggleClass('site-header-menu-icon-close-x');
+            $('.site-header-menu-content').toggleClass('site-header-menu-content-is-visible');
+            $('.site-header').toggleClass('site-header-is-expanded');
+       });
+   }
+    mobileMenu();
+    
 });
 
 
